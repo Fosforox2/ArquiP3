@@ -1,6 +1,6 @@
-## Practica 3 Arquitectura de Computadores
+# Practica 3 Arquitectura de Computadores
    
-# Ejercicio 1
+## Ejercicio 1
 
 En este ejercicio trabajo con el reparto de datos entre procesos usando MPI.
 El programa necesita ejecutarse con exactamente 5 procesos, porque cada uno recibirá un número distinto del array {0, 1, 2, 3, 4}.
@@ -11,7 +11,7 @@ Cuando cada proceso recibe su número, le suma su propio rango (el identificador
 Después, todos esos resultados se devuelven al proceso 0 mediante MPI_Gather.
 Una vez recibidos, el proceso 0 muestra por pantalla qué valor ha enviado cada proceso tras hacer la suma.
 
-Resultados:
+### Resultados:
 mpirun -np 5 ./Exe1
 
 Proceso 0 ha recibido el número 0
