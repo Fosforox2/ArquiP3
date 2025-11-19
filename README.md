@@ -11,18 +11,18 @@ Cuando cada proceso recibe su número, le suma su propio rango (el identificador
 Después, todos esos resultados se devuelven al proceso 0 mediante MPI_Gather.
 Una vez recibidos, el proceso 0 muestra por pantalla qué valor ha enviado cada proceso tras hacer la suma.
 
-### Resultados:
-mpirun -np 5 ./Exe1
+### Resultados:                                                                                           
 
-Proceso 0 ha recibido el número 0
+mpirun -np 5 ./Exe1                                                                                           
 
-Resultados recibidos de cada proceso:
-Proceso 0 envió el valor 0                                                                                           
+Resultados recibidos de cada proceso:                                                                                           
+Proceso 0 ha recibido el número 0                                                                                           
 Proceso 1 ha recibido el número 1                                                                                           
 Proceso 2 ha recibido el número 2                                                                                           
 Proceso 3 ha recibido el número 3                                                                                           
 Proceso 4 ha recibido el número 4                                                                                           
-                                                                                                                                                                                      
+                                                                                           
+Proceso 0 envió el valor 0                                                                                           
 Proceso 1 envió el valor 2                                                                                           
 Proceso 2 envió el valor 4                                                                                           
 Proceso 3 envió el valor 6                                                                                           
@@ -40,7 +40,7 @@ Cada posición del array se rellena con un número aleatorio entre 1 y 10. Luego
 Una vez recibido, cada proceso le suma su rango (su identificador).
 Después, todos los procesos devuelven su resultado al proceso 0 con MPI_Gather, y ese proceso los muestra todos por pantalla.
 
-Resultados:
+### Resultados:
 mpirun -np 7 ./Exe2                                                                                           
 
 Proceso 0 ha recibido el número 4                                                                                           
@@ -72,7 +72,7 @@ Después uso MPI_Reduce para sumar todos estos arrays posición por posición.
 Es decir, todos los elementos en la posición 0 se suman entre sí, lo mismo con la posición 1 y la posición 2.
 El resultado solo lo recibe el proceso 0, así que es ese proceso el que se encarga de imprimir el resultado final con las sumas acumuladas.
 
-Resultados:
+### Resultados:                                                                                           
 mpirun -np 4 ./Exe3                                                                                           
 
 Proceso 0 generó: -2 -4 -6                                                                                            
@@ -97,7 +97,7 @@ Como el proceso 0 también calcula su propio valor actualizado, lo uso para inic
 
 Cuando ya he recibido todos los valores, muestro cuál ha sido el menor y cuál el mayor.
 
-Resultados: (numero del proceso 0 = 11)                                                                                           
+### Resultados: (numero del proceso 0 = 11)                                                                                           
 mpirun -np 6 ./Exe4                                                                                           
 Valor mínimo = 11                                                                                           
 Valor máximo = 16                                                                                           
