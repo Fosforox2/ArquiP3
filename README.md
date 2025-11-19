@@ -17,13 +17,13 @@ mpirun -np 5 ./Exe1
 Proceso 0 ha recibido el número 0
 
 Resultados recibidos de cada proceso:
-Proceso 0 envió el valor 0
-Proceso 1 ha recibido el número 1
-Proceso 2 ha recibido el número 2
-Proceso 3 ha recibido el número 3
-Proceso 4 ha recibido el número 4
-
-Proceso 1 envió el valor 2
-Proceso 2 envió el valor 4
-Proceso 3 envió el valor 6
-Proceso 4 envió el valor 8
+Proceso 0 envió el valor 0                                                                                           
+Proceso 1 ha recibido el número 1                                                                                           
+Proceso 2 ha recibido el número 2                                                                                           
+Proceso 3 ha recibido el número 3                                                                                           
+Proceso 4 ha recibido el número 4                                                                                           
+                                                                                                                                                                                      
+Proceso 1 envió el valor 2                                                                                           
+Proceso 2 envió el valor 4                                                                                           
+Proceso 3 envió el valor 6                                                                                           
+Proceso 4 envió el valor 8                                                                                           
