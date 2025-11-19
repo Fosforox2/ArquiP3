@@ -23,18 +23,18 @@ int main(int argc, char** argv) {
         DatosProceso[i-1] = rango - (i*2);
     }
 
-    // Mostramos lo que genera cada proceso
+    //mostramos lo que genera cada proceso
     cout << "Proceso " << rango << " generó: ";
     for (int i = 0; i < 3; i++) {
         cout << DatosProceso[i] << " ";
     }    
     cout << endl;
 
-    // Reducimos (sumamos elemento a elemento) todos los arrays
+    //reducimos (sumamos elemento a elemento) todos los arrays
     int sumaGlobal[3];
     MPI_Reduce(DatosProceso, sumaGlobal, 3, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
-    // El proceso 0 muestra la suma final
+    //el proceso 0 muestra la suma final
     if (rango == 0) {
         cout << "\nSuma total por posición:" << endl;
         for (int i = 0; i < 3; i++) {

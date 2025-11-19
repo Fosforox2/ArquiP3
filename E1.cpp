@@ -19,11 +19,11 @@ int main(int argc, char** argv) {
         MPI_Finalize();
         return 0;
     }
-    //Mandamos los datos
+    //mandamos los datos
     MPI_Scatter(&send_data, 1, MPI_INT, &recv_data, 1, MPI_INT, 0, MPI_COMM_WORLD);
     cout << "Proceso " << rango << " ha recibido el número " << recv_data << endl;
     recv_data += rango;
-    //Recibimos Los Datos
+    //recibimos Los Datos
     MPI_Gather(&recv_data, 1, MPI_INT, result_data, 1, MPI_INT, 0, MPI_COMM_WORLD);
     if (rango == 0) {
         cout << "\nResultados recibidos de cada proceso:" << endl;
